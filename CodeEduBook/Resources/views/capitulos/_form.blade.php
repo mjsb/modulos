@@ -1,0 +1,20 @@
+{!! Html::openFormGroup('name', $errors) !!}
+    {!! Form::hidden('redirect_to', URL::previous()) !!}
+    {!! Form::label('name', 'Nome', ['class' => 'control-label']) !!}
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    {!! Form::error('name', $errors) !!}
+{!! Html::closeFormGroup() !!}
+
+{!! Html::openFormGroup('order', $errors) !!}
+    {!! Form::label('order', 'Ordem', ['class' => 'control-label']) !!}
+    {!! Form::text('order', isset($capitulo) ? $capitulo->order : 1, ['class' => 'form-control']) !!}
+    {!! Form::error('order', $errors) !!}
+{!! Html::closeFormGroup() !!}
+
+{!! Html::openFormGroup('content', $errors) !!}
+    {!! Form::label('content', 'Conteúdo', ['class' => 'control-label']) !!}
+    {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
+    {!! Form::error('content', $errors) !!}
+{!! Html::closeFormGroup() !!}
+
+@include('codeedubook::capitulos._ckeditor')

@@ -1,0 +1,15 @@
+{
+    "name": "app/codeedustore",
+    "description": "",
+    "authors": [
+        {
+            "name": "Marcio Borges",
+            "email": "marciojsb@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CodeEduStore\\": ""
+        }
+    }
+}
